@@ -1,4 +1,5 @@
 
+    <?php
     $params = array(
         'AWSAccessKeyId' => AWS_ACCESS_KEY_ID,
         'Action' => "ListCustomers",
@@ -37,3 +38,4 @@ $signature = str_replace("%7E", "~", $signature);
 
     $parsed_xml = simplexml_load_string($response);
 	file_put_contents('data.xml',$response);
+?>
